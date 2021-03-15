@@ -52,6 +52,9 @@ subprojects {
             txt {
                 enabled = false
             }
+            sarif {
+                enabled = true
+            }
         }
     }
 }
