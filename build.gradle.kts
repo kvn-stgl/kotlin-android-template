@@ -41,10 +41,19 @@ subprojects {
 
     detekt {
         config = rootProject.files("config/detekt/detekt.yml")
+        autoCorrect = true
         reports {
             html {
                 enabled = true
-                destination = file("build/reports/detekt.html")
+            }
+            xml {
+                enabled = true
+            }
+            txt {
+                enabled = false
+            }
+            sarif {
+                enabled = true
             }
         }
     }
